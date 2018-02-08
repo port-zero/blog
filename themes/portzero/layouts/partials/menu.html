@@ -1,0 +1,16 @@
+<div class="menu">
+
+    <ul class="menu_main">
+		{{ $currentNode := . }}
+        {{ range .Site.Menus.main -}}
+        <li class="{{if or ($currentNode.IsMenuCurrent "main" .) ($currentNode.HasMenuCurrent "main" .) }}active{{end}}"><a href="{{.URL}}">{{ .Name }}</a></li>
+        {{- end  }}
+    </ul>
+
+    <ul class="menu_secondary">
+        {{ range .Site.Menus.secondary -}}
+        <li{{ if $.IsPage }}{{ if eq .Identifier $.Type }}class="active"{{ end }}{{ end }}><a href="{{.URL}}" target="_BLANK">{{ .Name }}</a></li>
+        {{- end  }}
+    </ul>
+
+</div>

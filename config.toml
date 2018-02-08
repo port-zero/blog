@@ -1,0 +1,47 @@
+#baseURL = "https://blog.port-zero.com/"
+baseURL = "http://127.0.0.1:8000/"
+languageCode = "de-de"
+title = "Port Zero Blog"
+theme = "portzero"
+canonifyURLs = true
+[params]
+  description = "Der Blog"
+  licence = "[Some Rights Reserved](http://creativecommons.org/licenses/by-sa/4.0/)."
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+
+
+[[menu.main]]
+  name = "Blog"
+  weight = -100
+  identifier = "blog"
+  url = "/"
+[[menu.main]]
+  name = "Website"
+  weight = -100
+  identifier = "Website"
+  url = "https://www.port-zero.com"
+[[menu.main]]
+  name = "Kontakt"
+  weight = -70
+  identifier = "contact"
+  url = "mailto:contact@port-zero.com"
+[[menu.main]]
+  name = "Impressum"
+  weight = -60
+  identifier = "imprint"
+  url = "/imprint/"
+
+
+[[menu.secondary]]
+  name = "GitHub"
+  weight = -100
+  identifier = "github"
+  url = "https://github.com/port-zero"
+[[menu.secondary]]
+  name = "LinkedIn"
+  weight = -90
+  identifier = "linkedin"
+  url = "https://www.linkedin.com/company/5061707/"
+

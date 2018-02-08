@@ -1,0 +1,8 @@
+{{ define "main" }}
+
+<h3 class="tagline">Der Blog von Port Zero</h3>
+{{ range .Data.Pages }}
+    {{ .Render "summary" }}
+{{ end }}
+
+{{ end }}

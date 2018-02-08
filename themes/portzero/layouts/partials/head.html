@@ -1,0 +1,18 @@
+<head>
+	<base href="{{ .Site.BaseURL }}">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{- .Title }} - {{ .Site.Title -}}</title>
+	<link rel="shortcut icon" href="/static/img/logo.png" />
+	<meta name="description" content="{{ .Site.Params.description }}">
+    
+    {{ .Hugo.Generator }}
+
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    {{ with  .OutputFormats.Get "rss" -}}
+      <link href="{{ .Permalink | safeURL }}" rel="alternate" type="application/rss+xml" title="port zero feed" />
+      <link href="{{ .Permalink | safeURL }}" rel="feed" type="application/rss+xml" title="port zero feed" />
+    {{ end }}
+</head>
